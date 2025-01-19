@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Score</title>
+    <link rel="stylesheet" href="http://localhost:3000/templates/factor.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="icon">
+                <div class="logo">
+                    <img src="http://localhost:3000/templates/image/img1.png" alt="Logo" class="logo">
+                    
+                </div>
+                <div class="brand">
+                    <span >GPASCORE</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li ><a href="http://127.0.0.1:5000/home/dashboard">Dashboard</a><li>
+                        <li><a href="http://127.0.0.1:5000/home/dashboard/factors">Statistics</a></li>
+                        <li class="active"><a href="http://127.0.0.1:5000/home/dashboard/features">Features</a></li>
+                        <li><a href="http://127.0.0.1:5000/home/dashboard/logout">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="bottom-links">
+                <a href="http://localhost:3000/templates/form.html">Survey</a>
+                <a href="#">Help</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Features</h1>
+                <div class="user-info">
+                    <img src="http://localhost:3000/templates/image/img5.png" alt="student">
+                </div>
+            </header>
+            <section class="factors">
+                <div class="factor" id="1">
+                    <h2>Study Habits</h2>
+                    <p>Effective study habits, including time management, organization, and consistency play a significant role in academic success.</p>
+                </div>
+                <div class="factor" id="2">
+                    <h2>Time Management Skills</h2>
+                    <p>Properly allocating time for studying, attending classes, completing assignments, and engaging in extracurricular activities is essential.</p>
+                </div>
+                <div class="factor" id="3">
+                    <h2>Intrinsic Factors</h2>
+                    <p>Personal characteristics such as intelligence, perseverance, curiosity, and resilience also contribute to academic success and GPA performance.</p>
+                </div>
+                
+                <div class="factor" id="4">
+                    <h2>Physical and mental health</h2>
+                    <p>Physical and mental health directly impact academic performance . Proper nutrition, exercise, sleep, and stress management are essential for optimal cognitive function</p>
+                </div>
+                <div class="factor" id="5">
+                    <h2>Personal issues</h2>
+                    <p>Such as financial constraints, family responsibilities, or personal issues may effect a student's ability to focus on academic and impact their GPA.</p>
+                </div>
+                <div class="factor" id="6">
+                    <h2>Time management</h2>
+                    <p>Properly allocating time for studying, attending classes, completing assignments and engaging in extracurricular activities is essential.</p>
+                </div>
+                <div class="factor" id="7">
+                    <h2>Regular attendence</h2>
+                    <p>Regular attendance in classes allows students to stay updated with course materials, understand concepts better, and engage in discussions, which can positively impact their GPA.</p>
+                </div>
+                <div class="factor" id="8">
+                    <h2>Active participation</h2>
+                    <p>Actively participation in class discussions, asking questions, and seeking clarification concepts better , and engage in discussions, which can positively impact their GPA.</p>
+                </div>
+                <div class="factor" id="9">
+                    <h2>Preparation for exams and assignments</h2>
+                    <p>Adequate preparation in class discussions, including reviewing lecture notes, completing readings, and practicing problem sets, is crucial for performing well on exams and assignments.</p>
+                </div>
+                <div class="factor" id="10">
+                    <h2>Engagement with course materials</h2>
+                    <p>Actively engaging with course material through discussions, group study sessions or tutoring can enhance understanding and retention.</p>
+                </div>
+                <div class="factor" id="11">
+                    <h2>Academic support systems</h2>
+                    <p>Access to academic support services, such as tutoring, counselling, and study groups can help students navigate challenges and improve their performance.</p>
+                </div>
+                <div class="factor" id="12">
+                    <h2>Academic goals</h2>
+                    <p>Setting clear academic goals and staying motivated to achieve them can be drive to excel in their studies.</p>
+                </div>
+                <div class="factor" id="13">
+                    <h2>Gender</h2>
+                    <p>Sometimes gender wise personal characteristics are effect the overall performance of the GPA .</p>
+                </div>
+                <div class="factor" id="14">
+                    <h2>Quality of faculty and the instrutions</h2>
+                    <p>The quality of instruction, teaching methods, and accessibility of professors can influence students understanding of course material and overall academic performance</p>
+                </div>
+                <div class="factor" id="15">
+                    <h2>Learning environment</h2>
+                    <p>The quality of instruction, teaching methods, and accessibility of professors can influence students understanding of course material and overall academic performance.</p>
+                </div>
+                <div class="factor" id="16">
+                    <h2>Age</h2>
+                    <p>Age is also a major factor for the GPA.</p>
+                </div>
+                <div class="factor" id="17">
+                    <h2>Academic year</h2>
+                    <p>Academic year sometimes will affect the GPA performance.</p>
+                </div>
+                <div class="factor" id="18">
+                    <h2>Alcohol usage</h2>
+                    <p>Alcohol usage is also effect the GPA performance.</p>
+                </div>
+                <div class="move">
+                    <button id="back"><</button>
+                    <button id="next">></button>
+                    
+                </div>
+ 
+            </section>
+        </main>
+    </div>
+    <script>
+        window.addEventListener('load',function(){
+                hide();
+        });
+        function hide(){
+            for(let i=4; i<19; i++){
+                document.getElementById(i).style.display="none";
+            }   
+           
+        }
+            // Ensure the fade-in effect when the page loads or reloads
+            window.addEventListener('load', () => {
+            document.body.classList.add('fade-in');
+        });
+
+let count=0;
+document.getElementById('next').addEventListener('click',function(){
+        next();
+});
+
+function next(){
+    if(count<5){
+        count=count+1;
+  }
+
+    if(count==1){
+
+        for(let i=1; i<19; i++){
+                document.getElementById(i).style.display="none";
+                if(i==4 || i==5 || i == 6){
+                    document.getElementById(i).style.display="block";
+                }
+                
+            }      
+    }
+
+    if(count==2){
+   
+        for(let i=1; i<19; i++){
+                document.getElementById(i).style.display="none";
+                if(i==7 || i==8 || i == 9){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+        
+    }
+
+    if(count==3){
+   
+        for(let i=1; i<19; i++){
+            document.getElementById(i).style.display="none";
+                if(i==10 || i==11 || i == 12){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+ 
+    }
+
+    if(count==4){
+
+        for(let i=1; i<19; i++){
+            document.getElementById(i).style.display="none";
+                if(i==13 || i==14 || i == 15){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+    
+    }
+
+    if(count==5){
+
+        for(let i=1; i<19; i++){
+                document.getElementById(i).style.display="none";
+                if(i==16 || i==17 || i == 18){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+        
+    }
+    
+
+    console.log(count);
+}
+
+document.getElementById('back').addEventListener('click',function(){
+        back();
+});
+
+function back(){
+  
+    if(count>=1){
+        count=count-1;
+  }
+  if(count==0){
+
+        for(let i=1; i<19; i++){
+                document.getElementById(i).style.display="none";
+                if(i==1 || i==2 || i == 3){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+        
+    }
+    if(count==1){
+
+        for(let i=1; i<19; i++){
+                document.getElementById(i).style.display="none";
+                if(i==4 || i==5 || i == 6){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+        
+    }
+
+    if(count==2){
+
+        for(let i=1; i<19; i++){
+                document.getElementById(i).style.display="none";
+                if(i==7 || i==8 || i == 9){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+        
+    }
+
+    if(count==3){
+ 
+        for(let i=1; i<19; i++){
+                document.getElementById(i).style.display="none";
+                if(i==10 || i==11 || i == 12){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+ 
+    }
+
+    if(count==4){
+   
+        for(let i=1; i<19; i++){
+                document.getElementById(i).style.display="none";
+                if(i==13 || i==14 || i == 15){
+                    document.getElementById(i).style.display="block";
+                }
+            }   
+    
+    }
+
+    console.log(count);
+}
+    </script>
+</body>
+</html>

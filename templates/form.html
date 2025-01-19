@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Score</title>
+    <link rel="stylesheet" href="factor.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>GPA Score</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li ><a href="http://127.0.0.1:5000/home/dashboard">Dashboard</a><li>
+                        <li ><a href="http://127.0.0.1:5000/home/dashboard/factors">Statistics</a></li>
+                        <li><a href="http://127.0.0.1:5000/home/dashboard/features">Features</a></li>
+                        <li><a href="http://127.0.0.1:5000/home/dashboard/logout">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="bottom-links">
+                <ul>
+                    <a href="http://localhost:3000/templates/form.html">Survey</a>
+                    <a href="#">About us</a>
+                </ul>
+
+            </div>
+        </aside>
+        <main class="main-content">
+  
+            <section class="factors">
+                <div class="factor">
+ 
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe57_-FGHrZjQv9UN1pO6NsY1a0p016NQ6Nt0T_ijADv2W-gA/viewform?embedded=true" width="1200" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+                // Ensure the fade-in effect when the page loads or reloads
+                window.addEventListener('load', () => {
+     document.body.classList.add('fade-in');
+ });
+    </script>
+</body>
+</html>

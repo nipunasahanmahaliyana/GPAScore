@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factor Statistics</title>
+    <link rel="stylesheet" href="http://localhost:3000/templates/factorsta.css">
+   
+    
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="icon">
+                <div class="logo">
+                    <img src="http://localhost:3000/templates/image/img1.png" alt="Logo" class="logo">
+                    
+                </div>
+                <div class="brand">
+                    <span >GPASCORE</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li ><a href="http://127.0.0.1:5000/home/dashboard">Dashboard</a><li>
+                        <li class="active"><a href="http://127.0.0.1:5000/home/dashboard/factors">Statistics</a></li>
+                        <li><a href="http://127.0.0.1:5000/home/dashboard/features">Features</a></li>
+                        <li><a href="http://127.0.0.1:5000/home/dashboard/logout">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="bottom-links">
+                <a href="http://localhost:3000/templates/form.html">Survey</a>
+                <a href="#">Help</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Factor Statistics</h1>
+                <div class="header-right">
+                    <button class="pdf-button" id="pdfbutton">PDF</button>
+                    <div class="user-info">
+                        <img src="http://localhost:3000/templates/image/img5.png" alt="student">
+                    </div>
+                </div>
+            </header>
+            <section class="statistics">
+                <div class="left-panel"> 
+                    <button class="tab" id="1" value="1">Academic Year</button>
+                    <button class="tab"  id="2" value="2">Gender</button>
+                    <button class="tab"  id="3" value="3">Age</button>
+                    <button class="tab"  id="4" value="4">Physical and Mental Health</button>
+                    <button class="tab"  id="5" value="5">Personal Circumstances</button>
+                    <button class="tab"  id="6" value="6">Diseases</button>
+                    <button class="tab"  id="7" value="7">Alcohol Usage</button>
+                    <button class="tab"  id="8" value="8">Study Habits</button>
+                    <button class="tab"  id="9" value="9">Time Management Skills</button>
+                    <button class="tab"  id="10" value="10">Classc Attendence</button>
+                    <button class="tab"  id="11" value="11">Active Participation</button>
+                    <button class="tab"  id="12" value="12"> Preparation</button>
+                    
+                    <button class="tab"  id="13" value="13">Engagement with Course materials</button>
+                    <button class="tab"  id="14" value="14">Academic Support systems</button>
+                    <button class="tab"  id="15" value="15">Academic goals</button>
+                    <button class="tab"  id="16" value="16">Faculty and the Instructions</button>
+                    <button class="tab"  id="17" value="17">Learning Environment</button>
+                    <button class="tab"  id="18" value="18">Understandability </button>
+<div class="move">
+                    <button id="next" value="next" onclick="next();">>></button>
+                    <button id="back" value="back" onclick="back();"><<</button>
+                </div>              
+                    
+                </div>
+                <div class="right-panel" id="panel1">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Academic Year Distribution</h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+
+                </div>
+
+                <div class="right-panel" id="panel2">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Gender Distribution</h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data2 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+   
+                </div>
+
+                <div class="right-panel" id="panel3">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Age Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data3 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel4">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Physical and mental health Distribution 4</h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data4 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel5">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Presonal circumstances Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data5 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel6">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Diseases Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data6 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel7">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Alcohol usage Distribution</h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data7 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel8">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Study habits Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data8 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel9">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Time management Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data9 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel10">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Class attendence Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data10 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel11">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Active participation Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data11 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel12">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Exam preparation Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data12 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel13">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Engagement with course materials Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data13 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel14">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Academic support systems Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data14 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel15">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Academic goals Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data15 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel16">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Faculty and the instructions Distribution</h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data16 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel17">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Learning environment Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data17 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+
+                <div class="right-panel" id="panel18">
+                    <div class="chart-container"style="display:flex; flex-direction:column;align-items:center; justify-content: center;">
+                        <h2>Undertandability Distribution </h2>
+                        <div id="chart"><img src="data:image/png;base64,{{ plot_data18 }}" alt="Sample Plot" style="height: 50vh; width:90vh; text-align: center;" ></div>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+    </div>
+  
+    <script>
+        
+        window.addEventListener('load',function(){
+                hide();
+                
+        });
+                // Ensure the fade-in effect when the page loads or reloads
+                window.addEventListener('load', () => {
+     document.body.classList.add('fade-in');
+ });
+
+        function hide(){
+            document.getElementById("back").style.display="none";
+            for(let i=12; i<19; i++){
+                    document.getElementById(i).style.display="none    ";
+                }
+         
+              for(let i=1;i<19;i++){
+                if(i==1){
+                    document.getElementById("panel"+i).style.display="block";
+                    continue;
+                }
+                document.getElementById("panel"+i).style.display="none";
+              }
+                  
+                  
+        }
+
+        document.getElementById("next").addEventListener('click',next);
+        function next(){
+            document.getElementById("next").style.display="none";
+            document.getElementById("back").style.display="block";
+            for(let i=1; i<12; i++){
+                    document.getElementById(i).style.display="none";
+                }
+                for(let i=12; i<19; i++){
+                    document.getElementById(i).style.display="block";
+                }
+        }
+        document.getElementById("back").addEventListener('click',back);
+        function back(){
+            document.getElementById("next").style.display="block";
+            document.getElementById("back").style.display="none";
+            for(let i=1; i<12; i++){
+                    document.getElementById(i).style.display="block";
+                }
+                for(let i=12; i<19; i++){
+                    document.getElementById(i).style.display="none";
+                }
+        }
+
+
+
+        for( let i=1;i<19;i++){
+            document.getElementById(i).addEventListener("click",function(){
+                       
+                    show(i);
+            });
+
+        }
+   
+    
+        function show(i){
+            if(i==1){
+                for(let x=1;x<19;x++){
+                    if(x==1){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==2){
+                for(let x=1;x<19;x++){
+                    if(x==2){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==3){
+                for(let x=1;x<19;x++){
+                    if(x==3){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==4){
+                for(let x=1;x<19;x++){
+                    if(x==4){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==5){
+                for(let x=1;x<19;x++){
+                    if(x==5){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==6){
+                for(let x=1;x<19;x++){
+                    if(x==6){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==7){
+                for(let x=1;x<19;x++){
+                    if(x==7){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==8){
+                for(let x=1;x<19;x++){
+                    if(x==8){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==9){
+                for(let x=1;x<19;x++){
+                    if(x==9){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==10){
+                for(let x=1;x<19;x++){
+                    if(x==10){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==11){
+                for(let x=1;x<19;x++){
+                    if(x==11){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==12){
+                for(let x=1;x<19;x++){
+                    if(x==12){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==13){
+                for(let x=1;x<19;x++){
+                    if(x==13){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==14){
+                for(let x=1;x<19;x++){
+                    if(x==14){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==15){
+                for(let x=1;x<19;x++){
+                    if(x==15){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==16){
+                for(let x=1;x<19;x++){
+                    if(x==16){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==17){
+                for(let x=1;x<19;x++){
+                    if(x==17){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+            if(i==18){
+                for(let x=1;x<19;x++){
+                    if(x==18){
+                        document.getElementById(x).style.backgroundColor="green";
+                        document.getElementById("panel"+x).style.display="block";
+                        continue;
+                    }
+                    document.getElementById(x).style.backgroundColor="orange";
+                    document.getElementById("panel"+x).style.display="none";
+                }
+            }
+
+     }
+
+     document.getElementById('pdfbutton').addEventListener('click', function () {
+            window.print();
+        });
+
+    </script>
+</body>
+</html>

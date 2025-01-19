@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Score - factors</title>
+    <link rel="stylesheet" href="http://localhost:3000/templates/rate.css">
+   
+</head>
+<body>
+<form action="/home/dashboard/predict/rate/collect" method="post">
+    <div class="container" id = "1">
+        <div class="header">
+            <h1>Acacdemic year</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion();">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion();">&#9654;</div>
+            <div class="question">
+                The academic year you study ( ex.1 year, 2 year ) ?
+            </div>
+        <div class="rating-1">
+            
+                <ul>
+                    <li>
+                <input type="radio" id="firstYear" name ="year" value="1">
+                <label for="rate-0">First year</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="secondYear" name ="year"value="2" >
+                <label for="rate-0.2">Second year</label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="thirdYear" name ="year"  value="3">
+                <label for="rate-0.4">Third year</label>
+            </li>
+            <li>
+                <input type="radio" id="fourtYear"  name ="year" value="4" >
+                <label for="rate-0.6">Fourth year</label>
+            </li>
+
+            </ul>
+            </div>  
+        </div>
+    </div>
+
+    <div class="container" id = "2">
+        <div class="header">
+            <h1>Gender</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion();">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion();">&#9654;</div>
+            <div class="question">
+                What is your gender?
+            </div>
+            <div class="rating-1">
+                
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="gender" value=0>
+                <label for="rate-0">Male</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="gender" value=1>
+                <label for="rate-0.2">Female</label>
+                   </li>
+
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "3">
+        <div class="header">
+            <h1>Age </h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion();">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion();">&#9654;</div>
+            <div class="question">
+                Your age is 
+            </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="text" id="age" name="age" placeholder="Enter your age">
+                    </li>
+                  </ul>
+                </div>        
+        </div>
+    </div>
+
+    <div class="container"  id="4">
+        <div class="header">
+            <h1>Physical and Mental Strong</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion();">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion();">&#9654;</div>
+            <div class="question">
+                Are you Physically and Mentally strong ?
+            </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio"  name="strong" value=0 class="radio">
+                <label >Weak</label>
+                    </li>
+                
+                    <li>
+                <input type="radio"  name="strong" value=1>
+                <label >Below average </label>
+                   </li>
+            
+            <li>
+                <input type="radio" name="strong"  value=2>
+                <label >Average</label>
+            </li>
+            <li>
+                <input type="radio"  name="strong" value=3>
+                <label >Above average</label>
+            </li>
+            <li>
+                <input type="radio" name="strong" value=4>
+                <label >Strong </label>
+            </li>
+            <li>
+                <input type="radio" name="strong"  value=5>
+                <label >Very strong</label>
+            </li>
+
+            </ul>
+            </div>
+        </div>
+    </div>
+   
+    <div class="container" id = "5">
+        <div class="header">
+            <h1>Personal Problems</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                Are you suffering from personal circumstances (personal problems)  ?
+            </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio"  name="suffer" value=0>
+                <label >No, not at all</label>
+                    </li>
+                
+                    <li>
+                <input type="radio"  name="suffer" value=3>
+                <label >Sometimes</label>
+                   </li>
+            
+            <li>
+                <input type="radio"  name="suffer" value=5>
+                <label >Yes, constantly</label>
+            </li>
+
+            </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id = "6">
+        <div class="header">
+            <h1>long-term or chronic diseases</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                Do you have currently any long-term or chronic diseases?
+            </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio"  name="diseases" value=1>
+                <label for="rate-0">Yes</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" name="diseases" value=0>
+                <label for="rate-0.2">No</label>
+                   </li>
+            
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "7">
+        <div class="header">
+            <h1>Alcohol consume</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                Do you consume alcoholic beverages and/or smoke tobacco products? If yes, please specify the day
+            </div>
+            <div class="rating-1">
+                <ul>
+                  
+                    <li>
+                <input type="radio" id="rate-0" name="alcoholic" value=1>
+                <label for="rate-0">Daily</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="alcoholic" value=2>
+                <label for="rate-0.2">Weekly</label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="alcoholic" value=3>
+                <label for="rate-0.4">Monthly</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="alcoholic" value=4>
+                <label for="rate-0.6">No</label>
+            </li>
+
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "8">
+        <div class="header">
+            <h1>Study habits</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                How about your Study Habits?
+             </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="habits" value=0>
+                <label for="rate-0">Poor  </label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="habits"  value=1>
+                <label for="rate-0.2">Needs improvement </label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="habits"  value=2>
+                <label for="rate-0.4">Fair</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="habits"  value=3>
+                <label for="rate-0.6">Good </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="habits"  value=4>
+                <label for="rate-0.6">Very good </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="habits"  value=5>
+                <label for="rate-0.6">Excellent   </label>
+            </li>
+            
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "9">
+        <div class="header">
+            <h1>Time Management</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                How is your Time management skills?
+            </div>
+            <div class="rating-1">
+  
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="time" value=0>
+                <label for="rate-0">Poor</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="rate-0" name="time" value=1>
+                        <label for="rate-0">Needs Improvement</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="rate-0" name="time" value=2>
+                            <label for="rate-0">Fair</label>
+                            </li>
+                    <li>
+
+                <input type="radio" id="rate-0.2" name="time" value=3>
+                <label for="rate-0.2">Good </label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="time" value=4>
+                <label for="rate-0.4">Very good </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="time" value=5>
+                <label for="rate-0.6">Excellent </label>
+            </li>
+
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "10">
+        <div class="header">
+            <h1>Attendence</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                Do you regularly attend the classes ?
+            </div>
+            <div class="rating-1">
+          
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="attend" value=0>
+                <label for="rate-0">No, rarely attend </label>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="rate-0" name="attend" value=1>
+                        <label for="rate-0">Occasionally attend</label>
+                        </li>
+                    <li>
+
+                <input type="radio" id="rate-0.2" name="attend" value=3>
+                <label for="rate-0.2">Often attend</label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="attend"" value=4>
+                <label for="rate-0.4">Regularly attend</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="attend" value=5>
+                <label for="rate-0.6">Yes, always attend   </label>
+            </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "11">
+        <div class="header">
+            <h1>Actively Participation</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                Do you actively participate in classes ?
+            </div>
+        
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="active" value=0>
+                <label for="rate-0">Not at all</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="active" value=1>
+                <label for="rate-0.2">Minimal participation</label>
+                   </li>
+                   <li>
+                    <input type="radio" id="rate-0.4" name="active" value=2>
+                    <label for="rate-0.4">Moderate participation </label>
+                </li>
+                   <li>
+                    <input type="radio" id="rate-0.2" name="active" value=3>
+                    <label for="rate-0.2">Average Participation</label>
+                       </li>
+
+            <li>
+                <input type="radio" id="rate-0.6" name="active" value=4>
+                <label for="rate-0.6">Active participation</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="active"" value=5>
+                <label for="rate-0.6"> Very active participation</label>
+            </li>
+
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "12">
+        <div class="header">
+            <h1>Preparation for Exam</h1>
+        </div>
+
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                How about your preparation for Exams and Assignments?
+            </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="exam" value=0>
+                <label for="rate-0">Poor</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="exam" value=1>
+                <label for="rate-0.2">Needs improvement</label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="exam" value=2>
+                <label for="rate-0.4">Fair</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="exam" value=3>
+                <label for="rate-0.6"> Good</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="exam" value=4>
+                <label for="rate-0.6"> Very good</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="exam" value=5>
+                <label for="rate-0.6"> Excellent </label>
+            </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "13">
+        <div class="header">
+            <h1>Engagement with course materials</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                What about your engagement with course materials?
+            </div>
+         
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="course" value=0>
+                <label for="rate-0">Minimal engagement</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="course" value=1>
+                <label for="rate-0.2">Limited engagement</label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="course" value=2>
+                <label for="rate-0.4">Some engagement</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="course" value=3>
+                <label for="rate-0.6">Moderate engagement</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="course" value=4>
+                <label for="rate-0.6">High engagement</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="course" value=5>
+                <label for="rate-0.6">Very high engagement</label>
+            </li>
+
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "14">
+        <div class="header">
+            <h1>Academic Support systems</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                How strong your academic support systems?
+            </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="system" value=0>
+                <label for="rate-0">Weak</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="system" value=1>
+                <label for="rate-0.2">Limited</label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="system" value=2>
+                <label for="rate-0.4">Adequate</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="system" value=3>
+                <label for="rate-0.6">Good</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="system" value=4>
+                <label for="rate-0.6">Strong</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="system" value=5>
+                <label for="rate-0.6">Excellent</label>
+            </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id = "15">
+        <div class="header">
+            <h1>Academic goals </h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                Do you set an academic goals yourself and motivate yourself to achieve them?
+            </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="goals" value=0>
+                <label for="rate-0">No, not at all</label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="goals" value=1>
+                <label for="rate-0.2">Rarely</label>
+                   </li>
+                   <li>
+                    <input type="radio" id="rate-0.4" name="goals" value=2>
+                    <label for="rate-0.4">Occasionally</label>
+                </li>
+            <li>
+                <input type="radio" id="rate-0.4" name="goals" value=3>
+                <label for="rate-0.4"> Sometimes </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="goals" value=4>
+                <label for="rate-0.6">Often</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="goals" value=5>
+                <label for="rate-0.6">Yes, always </label>
+            </li>
+
+            </ul>
+            </div>          
+        </div>
+    </div>
+
+    <div class="container" id = "16">
+        <div class="header">
+            <h1>Faculty and the instructionss</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                How about your faculty and the instructions they(lectures) give?
+            </div>
+            <div class="rating-1">
+
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="lectures" value=0>
+                <label for="rate-0">Poor </label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="lectures" value=1>
+                <label for="rate-0.2">Below average</label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="lectures" value=2>
+                <label for="rate-0.4">Average </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="lectures" value=3>
+                <label for="rate-0.6">Above average</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="lectures" value=4>
+                <label for="rate-0.6">Good  </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="lectures" value=5>
+                <label for="rate-0.6"> Excellent</label>
+            </li>
+
+            </ul>
+            </div>        
+        </div>
+    </div>
+
+    <div class="container" id = "17">
+        <div class="header">
+            <h1>Learning Environment</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                Do you satisfy with your learning environment?
+            </div>
+            <div class="rating-1">
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="environment" value=1>
+                <label for="rate-0">No, not at all</label>
+                    </li>
+                    <li>
+                <input type="radio" id="rate-0.2" name="environment" value=2>
+                <label for="rate-0.2">Somewhat unsatisfied  </label>
+                   </li>
+            <li>
+                <input type="radio" id="rate-0.4" name="environment" value=3>
+                <label for="rate-0.4">Neutral</label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="environment" value=4>
+                <label for="rate-0.6">Satisfied </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="environment" value=4>
+                <label for="rate-0.6">Yes, very satisfied</label>
+            </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id = "18">
+        <div class="header">
+            <h1>Undesrtanding</h1>
+        </div>
+        <div class="question-box">
+            <div class="nav-arrow left" onclick="countMinus();  nextQuestion()">&#9664;</div>
+            <div class="nav-arrow right" onclick="countPlus();  nextQuestion()">&#9654;</div>
+            <div class="question">
+                Can you able to  understand the things you study?
+            </div>
+            <div class="rating-1">
+
+                <ul>
+                    <li>
+                <input type="radio" id="rate-0" name="study" value=0>
+                <label for="rate-0">I can't  </label>
+                    </li>
+                
+                    <li>
+                <input type="radio" id="rate-0.2" name="study" value=1>
+                <label for="rate-0.2">Not sure</label>
+                   </li>
+            
+            <li>
+                <input type="radio" id="rate-0.4" name="study" value=2>
+                <label for="rate-0.4">Maybe </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="study" value=3>
+                <label for="rate-0.6">Likely </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="study" value=4>
+                <label for="rate-0.6"> Probably  </label>
+            </li>
+            <li>
+                <input type="radio" id="rate-0.6" name="study" value=5>
+                <label for="rate-0.6">Definitely </label>
+            </li>
+           
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="submit-btn">
+        <button type="submit" id = "button" onclick="nextQuestion()">Submit it</button>
+    </div>
+</form>
+
+   
+    <script>
+         window.addEventListener("load", function() {
+            hide();
+        });
+
+                // Ensure the fade-in effect when the page loads or reloads
+                window.addEventListener('load', () => {
+     document.body.classList.add('fade-in');
+ });
+
+        function hide(){
+            document.getElementById('1').style.display = 'block';
+            document.getElementById('button').style.display = 'none';
+            for(let x=1; x<19; x++){
+            if (x==1){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+            }   
+        }
+
+        var count=1;
+        
+        function nextQuestion(){
+
+
+            if(count ==1){
+                document.getElementById('1').style.display = 'block';
+                document.getElementById('button').style.display = 'none';
+                for(let x=1; x<19; x++){
+                    if (x==1){
+                        continue;
+                    }
+                    document.getElementById(x).style.display = 'none';
+                }
+                
+               
+                console.log("element 1 "+count);
+                
+            }else if(count==2){
+                document.getElementById('2').style.display = 'block';
+                document.getElementById('button').style.display = 'none';
+                for(let x=1; x<19; x++){
+                    if (x==2){
+                        continue;
+                    }
+                    document.getElementById(x).style.display = 'none';
+                }
+                console.log("element 2 "+count);
+                
+            }else if(count==3){
+                document.getElementById('3').style.display = 'block';
+                document.getElementById('button').style.display = 'none';
+                for(let x=1; x<19; x++){
+                    if (x==3){
+                        continue;
+                    }
+                    document.getElementById(x).style.display = 'none';
+                }
+                console.log("element 3 "+count);
+
+            }else if(count==4){
+                document.getElementById('4').style.display = 'block';
+                document.getElementById('button').style.display = 'none';
+                for(let x=1; x<19; x++){
+                    if (x==4){
+                        continue;
+                    }
+                    document.getElementById(x).style.display = 'none';
+                }
+                console.log("element 4 "+count);
+
+            }else if(count==5){
+                document.getElementById('5').style.display = 'block';
+                document.getElementById('button').style.display = 'none';
+                for(let x=1; x<19; x++){
+                    if (x==5){
+                        continue;
+                    }
+                    document.getElementById(x).style.display = 'none';
+                }
+                console.log("element 5 "+count);
+
+            } else if(count==6){
+        document.getElementById('6').style.display = 'block';
+        document.getElementById('button').style.display = 'none';
+        for(let x=1; x<19; x++){
+            if (x==6){
+                continue;
+            }                    
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 6 "+count);
+}else if(count==7){
+document.getElementById('7').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==7){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 7 "+count);
+}else if(count==8){
+document.getElementById('8').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==8){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 8 "+count);
+
+}else if(count==9){
+document.getElementById('9').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==9){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 9 "+count);
+
+}else if(count==10){
+document.getElementById('10').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==10){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 10 "+count);
+
+}else if(count==11){
+document.getElementById('11').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==11){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 11 "+count);
+
+}else if(count==12){
+document.getElementById('12').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==12){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 12 "+count);
+
+}else if(count==13){
+document.getElementById('13').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==13){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 13 "+count);
+
+}else if(count==14){
+document.getElementById('14').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==14){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 14 "+count);
+
+}else if(count==15){
+document.getElementById('15').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==15){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 15 "+count);
+
+}else if(count==16){
+document.getElementById('16').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==16){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 16 "+count);
+
+}else if(count==17){
+document.getElementById('17').style.display = 'block';
+document.getElementById('button').style.display = 'none';
+for(let x=1; x<19; x++){
+            if (x==17){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 17 "+count);
+
+}else if(count==18){
+document.getElementById('18').style.display = 'block';
+document.getElementById('button').style.display = 'block';
+for(let x=1; x<19; x++){
+            if (x==18){
+                continue;
+            }
+            document.getElementById(x).style.display = 'none';
+        }
+        console.log("element 18 "+count);
+}
+
+}
+        
+        function countPlus(){
+            if(count<18){
+                count = count+1;
+                console.log(count);
+            }
+            
+        }
+       
+        function countMinus(){
+
+            if((count -1) == 0){
+                console.log("error");
+            }
+            else{
+                count = count-1;
+                console.log(count);
+                }
+               
+            }
+            
+
+        
+    </script>
+</body>
+
+</html>

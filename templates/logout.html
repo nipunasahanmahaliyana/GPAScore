@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Screen</title>
+    <link rel="stylesheet" href="http://localhost:3000/templates/logout.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">GPA Score</div>
+            <ul class="menu">
+                <li ><a href="http://127.0.0.1:5000/home/dashboard">Dashboard</a><li>
+                    <li><a href="http://127.0.0.1:5000/home/dashboard/factors">Statistics</a></li>
+                    <li><a href="http://127.0.0.1:5000/home/dashboard/features">Features</a></li>
+                    <li class="active"><a href="http://127.0.0.1:5000/home/dashboard/logout">Logout</a></li>
+            </ul>
+            <div class="bottom-menu">
+                <a href="http://localhost:3000/templates/form.html">Survey</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="logout-box">
+                <h1>LOG OUT</h1>
+                <div class="icon"></div>
+                <p>Are you sure?</p>
+                <div class="buttons">
+                    <a href="http://127.0.0.1:5000/"><button class="yes-button">Yes</button></a>
+                    <a href="http://127.0.0.1:5000/home/dashboard"><button class="no-button">No</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="user-profile">
+            <img src="http://localhost:3000/templates/image/img5.png" alt="User Profile Picture" class="profile-picture">
+        </div>
+    </div>
+    <script>
+        // Ensure the fade-in effect when the page loads or reloads
+        window.addEventListener('load', () => {
+     document.body.classList.add('fade-in');
+ });
+
+
+</script>
+</body>
+</html>

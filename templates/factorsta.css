@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(90deg, #a30d97, #eb6d1a);
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  
+  body.fade-in {
+    opacity: 1;
+  }
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background: #1c1c1c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0px 50px 50px 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px 20px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar nav ul li.active a {
+    color: orange;
+}
+
+.sidebar .bottom-links {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sidebar .bottom-links a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: 10px 0;
+}
+
+.main-content {
+    flex: 1;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab{
+    display: inline-block;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
+.header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header .pdf-button {
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 20px;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.header .user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.statistics {
+    display: flex;
+    margin-top: 20px;
+    flex: 1;
+}
+
+.left-panel {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px,10px,10px,10px;
+}
+
+.left-panel .tab {
+    background-color: orange;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color:white;
+}
+
+.left-panel .tab:hover {
+    background-color: greenyellow;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color:white;
+}
+
+.left-panel .tab.active {
+    background-color: #b2f2bb;
+}
+
+.right-panel {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.chart-container {
+    flex: 1;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-box img {
+    width: 50px;
+    height: 50px;
+}
+
+.pdf-button:hover{
+cursor: pointer;
+}
+
+
+.sidebar .logo {
+    display: flex;
+    flex-direction: row;
+     text-align: center;
+     margin-top:5vh;
+   }
+   .icon{
+     display: flex;
+     flex-direction: row;
+   
+     .logo {
+       width: 40px;
+       height: 40px;
+     padding-top: 8px;
+     }
+     .brand span{
+       font-size: 25px;
+       font-weight: bold;
+     }
+   }
+   .brand{
+     padding: 20px;
+     margin-top:10vh;
+   }
+.move{
+    display: flex;
+    justify-content: center;
+}
+
+.move button{
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: grey;
+    color:white;
+}

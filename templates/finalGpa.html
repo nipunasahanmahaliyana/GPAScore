@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Score</title>
+    <link rel="stylesheet" href="http://localhost:3000/templates/finalGpa.css">
+       
+</head>
+<body>
+    <header>
+        <a href="http://localhost:3000/templates/dashboard.html">
+            <div class="logo">
+            <img src="http://localhost:3000/templates/image/img1.png" alt="GPA Score Logo">
+            <span>GPASCORE</span>
+        </div>
+    </a>
+        <div class="search-container">
+            <input type="text" placeholder="Search here...">
+        </div>
+        <div class="profile">
+            <img src="http://localhost:3000/templates/image/img5.png" alt="Profile Picture">
+        </div>
+        
+    </header>
+    <a href="http://127.0.0.1:5000/home/dashboard"><button id="back" >Dashboard</button></a>
+    <main>
+     
+        <h1>Here it is...</h1>
+        <div class="gpa-display">
+            <div class="gpa-value" id="value">{{message}}</div>
+            <div class="gpa-gauge">GPA</div>
+        </div>
+        <div class="illustration">
+            <!-- Here, you would use an SVG or PNG illustration -->
+        </div>
+        <div class="feedback-buttons">
+            <button class="accept" id="correct"  value="1">✓</button>
+            <button class="reject" id ="wrong"  value="1">✕</button>
+            <div id="message"></div>
+        </div>
+        <p class="feedback-message" id="msg">*If it not, help us to improve</p>
+        
+    </main>
+    <script>
+              // Ensure the fade-in effect when the page loads or reloads
+              window.addEventListener('load', () => {
+     document.body.classList.add('fade-in');
+ });
+        document.getElementById('correct').addEventListener('click',function (){
+            if (this.value == "1") {
+                document.getElementById('correct').style.display="none";
+                document.getElementById('wrong').style.display="none";
+                document.getElementById('message').textContent = "Thanks for using GPA Preditor";
+                document.getElementById('msg').style.display="none";
+        }
+        });
+
+        document.getElementById('wrong').addEventListener('click',function (){
+         if(this.value=="1"){
+            document.getElementById('correct').style.display="none";
+            document.getElementById('wrong').style.display="none";
+            document.getElementById('message').textContent = "Sorry,Trying our best to increase aacuracy";
+            document.getElementById('msg').style.display="none";
+        }
+        });
+     
+    </script>
+</body>
+</html>

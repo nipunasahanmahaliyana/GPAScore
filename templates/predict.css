@@ -1,0 +1,129 @@
+*{
+    
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('http://localhost:3000/templates/image/frequency-wave-7776034.jpg');
+    background-size: cover;
+    /* background: #2c2c2c; */
+    color: #fff;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  
+  body.fade-in {
+    opacity: 1;
+  }
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo span {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.search-container input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-left: 100vh;
+    width: 40vh;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 80px);
+    padding: 20px;
+}
+
+.content {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-left: 20vh;
+
+}
+.textBox{
+    width:75vh;
+}
+
+.textBox h1 {
+    font-size: 70px;
+   
+}
+
+.content p {
+    font-size: 30px;
+    text-align: justify;
+}
+
+.start-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: #ff5733;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.start-btn:hover {
+    transition: 0.5s;
+    padding: 30px 60px;
+    font-size: 30px;
+    color: #fff;
+    background: orange;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    
+}
+
+
+
+.illustration img {
+    width:100%;
+    height: 100%;
+    float: right;
+    margin-right: -20vh;
+   
+}
+
+.logo a {
+    text-decoration: none;
+}
+

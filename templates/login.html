@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPA Score</title>
+    <link rel="stylesheet" href="http://localhost:3000/templates/Account.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container_login">
+        <div class="bar flex-container">
+          <div class="logo flex-item">
+            <i class="fa-solid fa-graduation-cap box"></i>
+            <span style="font-family: akrux; font-size: 25px"
+              >GPA<span style="color: rgb(255, 191, 0)">SCORE</span></span
+            >
+          </div>
+          <div class="logo2 flex-item">
+            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-headset"></i>
+          </div>
+        </div>
+        <div class="body_login">
+          <form action="http://localhost:3000/templates/login.php" method="post">
+          <div class="form_login">
+            <h1>Login</h1>
+            <p class="note">Sign in to continue</p>
+            <label for="">EMAIL</label>
+            <input type="email" id="email" name="email" required />
+            <label for="">PASSWORD</label>
+            <input type="password" id="password" name="password" required/>
+            <p class="note">*forgot password</p>
+            <a href="http://127.0.0.1:5000/register"><p class="note">*New to here..Register</p></a>
+            <button type="submit">Login</button>
+          </form>
+          </div>
+          <div class="image_login">
+            <img src="http://localhost:3000/templates/image/img8.jpg" alt="" width="90%" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Ensure the fade-in effect when the page loads or reloads
+      window.addEventListener('load', () => {
+   document.body.classList.add('fade-in');
+});
+
+
+</script>
+  </body>
+</html>
+

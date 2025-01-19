@@ -1,0 +1,148 @@
+/* Reset and basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+#back{
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    margin-left:10vh;
+    border-radius: 50px ;
+    background-color: green;
+    color:white;
+    font-weight: 900;
+    border:none;
+}
+
+#back:hover{
+    cursor: pointer;
+    background-color:goldenrod;
+}
+
+body {
+    font-family: sans-serif;
+    /* background-color: #333; */
+    background-image: linear-gradient(rgb(39, 38, 38), rgb(79, 74, 74));
+    color: #fff;
+    opacity: 0;
+    transition: opacity 2s;
+    background-image: url('http://localhost:3000/templates/image/book.jpg');
+    background-size: cover;
+  }
+  
+  body.fade-in {
+    opacity: 1;
+  }
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo span {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.search-container input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gpa-display {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.gpa-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+
+
+.illustration {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.feedback-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feedback-buttons button {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.accept {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.reject {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.feedback-message {
+    font-size: 0.8rem;
+}
+
+a{
+    text-decoration: none;
+}

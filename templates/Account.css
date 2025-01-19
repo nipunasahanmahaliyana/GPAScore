@@ -1,0 +1,155 @@
+*{
+    /* background-color: #606060; */
+    margin: 0;
+    padding: 0;
+   
+}
+.body{
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+body.fade-in {
+opacity: 1;
+}
+
+.main{
+    background-color: rgb(40, 40, 40);
+    height: 100%;
+    width:100%;
+    padding-top: 10vh;
+    overflow: hidden;
+}
+
+.container{
+    background: #fff;
+    height: 90vh;
+    width: 90%;
+    border-top-right-radius: 70px;
+    overflow: hidden;
+    
+}
+
+.container_login{
+  background: #fff;
+  height: 90vh;
+  width: 90%;
+  border-top-left-radius: 70px;
+  overflow: hidden;
+  margin-left: 20vh;
+  
+}
+
+.bar{
+    display: flex;
+}
+
+.box{
+    display: inline-block;
+}
+
+.flex-container {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Center child elements horizontally */
+    align-items: center; /* Center child elements vertically */
+    /* height: 200px; Set height for demonstration */
+    /* border: 1px solid #ccc; Add border for visualization */
+    padding: 20px;
+    padding-top: 0;
+    overflow: hidden;
+    
+  }
+  .flex-item {
+    padding: 30px; /* Add padding for spacing */
+    margin: 10px; /* Add margin for spacing */
+    font-size: 40px;
+  }
+  
+
+  .form{
+    width: 40%;
+    float: left;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 150px;
+    justify-content: center;
+    
+  }
+  .form_login{
+    width: 40%;
+    height:100vh;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20vh;
+    margin-top: 10vh;
+  }
+a{
+  text-decoration: none;
+}
+  .image{
+    width: 40%;
+    float: right;
+    /* background-color: aqua; */
+  }
+
+  .image_login{
+    width: 40%;
+    float: left;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  h1{
+    font-size: 50px;
+    font-family: 'poppins';
+    line-height: 1;
+    margin-top: -30px;
+  }
+
+  .note{
+    margin-top: 10px;
+    color: gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  label{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  input{
+    background-color: rgb(219, 219, 219);
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+  }
+
+  button{
+    background-color: rgb(255, 43, 15);
+    border: none;
+    height: 40px;
+    width: 150px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 25px;
+  }
+
+  button:hover{
+    background-color:aqua;
+    cursor: pointer;
+  }
+
+   input{
+    padding: 2px;
+  }
