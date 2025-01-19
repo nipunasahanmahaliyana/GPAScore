@@ -31,11 +31,6 @@ A machine learning-powered web application to predict students' GPA based on key
 
 ---
 
-## 🌈 **Screenshots**
-*(Add screenshots or GIFs of your web application here to make the README visually appealing.)*
-
----
-
 ## 💃 **Project Structure**
 ```plaintext
 .
