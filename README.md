@@ -77,6 +77,6 @@ The model was rigorously tested to ensure high accuracy in GPA predictions, maki
 ---
 
 ## 🧑‍💻 **Author**
-- **GitHub**: [yourusername](https://github.com/nipunasahanmahaliyana)
+- **GitHub**: [Nipuna Mahaliyana](https://github.com/nipunasahanmahaliyana)
 
 ---
